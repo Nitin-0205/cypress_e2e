@@ -23,7 +23,8 @@ describe('template spec', () => {
     cy.get('[data-label="Add Employee Checkin"]').click();
     // cy.get('.input-with-feedback.form-control.bold[data-fieldname="employee"]')
     //   .type(Cypress.env('EMP_ID'));
-    cy.get('select[data-fieldtype="Select"]').select('IN');
+    // cy.get('select[data-fieldtype="Select"]').select('IN');
+    cy.get('select[data-fieldtype="Select"][data-fieldname="log_type"]').select('IN');
     cy.wait(1000);
     cy.get('[data-label="Save"]').click();
     cy.wait(1000);
